@@ -51,7 +51,7 @@ right Maven version automatically the first time you run it.
 ```bash
 # 1. Build it (this also runs all the tests)
 ./mvnw package          # macOS / Linux
-mvnw.cmd package        # Windows
+.\mvnw.cmd package      # Windows (PowerShell or Command Prompt)
 
 # 2. Play in a window
 java -jar target/chess-engine.jar
@@ -83,7 +83,7 @@ To use it in a chess GUI, add a new engine and point it at a small script that r
 Run only the tests with:
 
 ```bash
-./mvnw test             # or mvnw.cmd test on Windows
+./mvnw test             # or .\mvnw.cmd test on Windows
 ```
 
 ## How it works
