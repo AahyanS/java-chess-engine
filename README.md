@@ -44,11 +44,14 @@ written here in plain Java.
 
 ## How to run it
 
-You need **Java 17 or newer** and **Maven**. Check with `java -version` and `mvn -version`.
+You only need **Java 17 or newer** (check with `java -version`). You don't need to
+install Maven: the project includes the Maven Wrapper (`mvnw`), which downloads the
+right Maven version automatically the first time you run it.
 
 ```bash
 # 1. Build it (this also runs all the tests)
-mvn package
+./mvnw package          # macOS / Linux
+mvnw.cmd package        # Windows
 
 # 2. Play in a window
 java -jar target/chess-engine.jar
@@ -80,7 +83,7 @@ To use it in a chess GUI, add a new engine and point it at a small script that r
 Run only the tests with:
 
 ```bash
-mvn test
+./mvnw test             # or mvnw.cmd test on Windows
 ```
 
 ## How it works
@@ -168,7 +171,7 @@ responsive, and it streams its progress to the "AI thinking" box after each dept
 
 ## Tests
 
-`mvn test` runs 42 tests:
+`./mvnw test` runs 42 tests:
 
 | Test class      | What it checks |
 |-----------------|----------------|
